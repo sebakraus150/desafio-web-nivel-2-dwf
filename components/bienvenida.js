@@ -54,32 +54,33 @@ function configBienvenida(params = {}) {
   const clone = document.importNode(template.content, true);
   container.appendChild(clone);
 }
-function getData(urlData) {
+function getData(urlData, paramText, paramImg) {
   return fetch(urlData)
     .then((res) => {
       return res.json();
     })
     .then((data) => {
-      const dataText = data.items[0].fields;
+      const dataText = data.items[paramText].fields;
       const dataImgs = data.includes.Asset;
+      console.log(dataImgs);
       const tituloCeleste = dataText.bienvenidaTituloCeleste.split(" ");
       return {
         tituloBlanco: dataText.bienvenidaTituloBlanco,
         tituloCelesteOne: tituloCeleste[0],
         tituloCelesteTwo: tituloCeleste[1],
-        imgBienvenida: dataImgs[0].fields.file.url,
+        imgBienvenida: dataImgs[paramImg].fields.file.url,
         titlePresentacion: dataText.presentacionTextName,
         descriptionPresentacion: dataText.presentacionTextDescription,
-        imgPresentacion: dataImgs[1].fields.file.url,
+        imgPresentacion: dataImgs[2].fields.file.url,
       };
     });
 }
 
-function addBienvenida(urlData, display) {
+function addBienvenida(urlData, display, paramText, paramImg) {
   const bienvenidaEl = document.querySelector(".component-bienvenida");
   nuevaBienvenida(bienvenidaEl);
   document.addEventListener("DOMContentLoaded", function () {
-    getData(urlData).then((params) => {
+    getData(urlData, paramText, paramImg).then((params) => {
       configBienvenida(params);
       document.querySelector(".presentacion").style.display = display;
     });

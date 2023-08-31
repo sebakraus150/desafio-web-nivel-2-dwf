@@ -55,25 +55,4 @@ body{
         padding-left: 10%;
     }
 }
-.services{
-    background-image: url(/imgs/backgroundServices.png);
-}
-.services__title{
-    text-align: center;
-    padding: 60px 0;
-}
-.services__title-blanco{
-    display: inline;
-    font-size: 42px;
-}
-.services__title-celeste{
-    display: inline;
-    color: #00ADB5;
-    font-size: 42px;
-}
-@media (min-width: 768px) {
-    .services__title-celeste, .services__title-blanco{
-        padding: 0 3px;
-       font-size: 64px;
-    }
-}
+
