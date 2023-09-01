@@ -62,7 +62,6 @@ function getData(urlData, paramText, paramImg) {
     .then((data) => {
       const dataText = data.items[paramText].fields;
       const dataImgs = data.includes.Asset;
-      console.log(dataImgs);
       const tituloCeleste = dataText.bienvenidaTituloCeleste.split(" ");
       return {
         tituloBlanco: dataText.bienvenidaTituloBlanco,

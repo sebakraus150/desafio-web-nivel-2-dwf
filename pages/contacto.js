@@ -1,0 +1,5 @@
+(function () {
+  addHeader();
+  addContacto();
+  addFooter();
+})();
