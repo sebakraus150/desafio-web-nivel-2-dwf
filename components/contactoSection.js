@@ -7,11 +7,11 @@ function nuevoContacto(el) {
         <div class="contacto__form-duo-iputs">
             <label class="contacto__form-label" for="input-nombre">
                 <p class="contacto__label-text">Nombre</p>
-                <input class="contacto__form-input" type="text" placeholder="Tu nombre" id="input-nombre">
+                <input class="contacto__form-input" type="text" placeholder="Tu nombre" id="input-nombre" autocomplete="off">
             </label>
             <label class="contacto__form-label" for="input-email">
                 <p class="contacto__label-text">Email</p>
-                <input class="contacto__form-input" type="email" placeholder="tu@mail.com" id="input-email">
+                <input class="contacto__form-input" type="email" placeholder="tu@mail.com" id="input-email" autocomplete="off">
             </label>
         </div>
         <label class="contacto__form-label" for="textarea-mensaje">
@@ -50,20 +50,19 @@ function addContacto() {
       to: email,
       message: `${nombre} ha enviado el siguiente mensaje: ${mensaje}`,
     };
-    /*
-      fetch("https://apx-api.vercel.app/api/utils/dwf", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(data),
+    fetch("https://apx-api.vercel.app/api/utils/dwf", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((responseData) => {
+        console.log(responseData);
+        alert("El mensaje ha sido enviado exitosamente.");
       })
-        .then((response) => response.json())
-        .then((responseData) => {
-          console.log(responseData);
-          alert("El mensaje ha sido enviado exitosamente.");
-        })
-        .catch((error) => {
-          console.error(error);
-          alert("Ha ocurrido un error al enviar el mensaje.");
-        });*/
+      .catch((error) => {
+        console.error(error);
+        alert("Ha ocurrido un error al enviar el mensaje.");
+      });
   });
 }

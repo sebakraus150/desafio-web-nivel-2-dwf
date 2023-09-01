@@ -26,13 +26,13 @@ function main() {
   const abrirVentanaEl = document.querySelector(".ventana__cerrar-ventana");
   const cerrarVentanaEl = document.querySelector(".ventana__abrir-ventana");
 
-  document.addEventListener("DOMContentLoaded", function () {
-    cerrarVentanaEl.addEventListener("click", function () {
-      abrirVentanaEl.style.display = "inherit";
-    });
-    abrirVentanaEl.addEventListener("click", function () {
-      abrirVentanaEl.style.display = "";
-    });
+  cerrarVentanaEl.addEventListener("click", function () {
+    abrirVentanaEl.style.display = "inherit";
+    document.body.style.overflow = "hidden";
+  });
+  abrirVentanaEl.addEventListener("click", function () {
+    abrirVentanaEl.style.display = "";
+    document.body.style.overflow = "auto";
   });
 }
 function addHeader() {

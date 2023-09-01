@@ -51,7 +51,7 @@
 }
 @media (min-width: 768px) {
     .bienvenida__img{
-    margin: 250px 0 100px 0;
+    margin: 200px 0 150px 0;
     }
 }
 .bienvenida__img-content{
@@ -63,6 +63,15 @@
         margin: 0 0px 150px 40px;
     }
 }
+.bienvenida__img-content-maletin{
+    width: 219px
+}
+@media (min-width: 768px) {
+    .bienvenida__img-content-maletin{
+        width: 292px;
+    }
+}
+
 .bienvenida__img-shadow{
     display: none;
 }
@@ -71,7 +80,53 @@
         display: block;
         background-color: rgba(0, 0, 0, 0.568);
         border-radius: 50%;
-        height: 15px;
-        width: 70%;
+        height: 24px;
+        width: 90%;
     }
 }
+.presentacion{
+    background-color:#192130;
+    padding: 70px 7.5%;
+}
+@media (min-width: 768px) {
+    .presentacion{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 150px 0
+    }
+}
+@media (min-width: 768px) {
+    .presentacion__text{
+        width: 40%;
+        padding-left: 5%;
+    }
+}
+.presentacion__text-name{
+    font-size: 42px;
+    padding-bottom: 30px;
+}
+@media (min-width: 768px) {
+    .presentacion__text-name{
+        font-size: 64px
+    }
+}
+.presentacion__text-description{
+    padding-bottom: 65px;
+    font-size: 18px;
+}
+
+@media (min-width: 768px) {
+    .presentacion__div{
+        display: flex;
+        justify-content: end;
+        padding-right: 5%;
+        width: 50%;
+    }
+}
+.presentacion__div-img{
+    width: 100%;
+    max-width: 100%;
+}
+
+

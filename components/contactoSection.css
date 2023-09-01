@@ -82,7 +82,7 @@
 }
 .contacto__boton:active {
     transform: scale(0.90); /* Reducir el tamaño del botón en un 5% */
-  }
+}
 @media (min-width: 768px) {
     .contacto__boton{
         width: 40%;

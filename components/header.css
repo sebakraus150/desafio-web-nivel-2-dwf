@@ -21,11 +21,16 @@
     background-color: transparent;
     border: none;
 }
+
 @media (min-width: 768px) {
     .ventana__abrir-ventana{
         display: none;
     }
 }
+.ventana__boton-abrir-menu{
+    cursor: pointer;
+}
+
 .ventana__cerrar-ventana{
     display: none;
     height: 100%;
@@ -36,7 +41,6 @@
     bottom: 0;
     top: 0;
     background-color: #000;
-    
 }
 @media (min-width: 768px) {
     .ventana__cerrar-ventana{
@@ -46,10 +50,10 @@
     }
 }
 .ventana__boton-cerrar-menu{
-    cursor: pointer;
     position: absolute;
-    right: 20px;
-    top: 40px;
+    right: 27px;
+    top: 32px;
+    cursor: pointer;
 }
 @media (min-width: 768px) {
     .ventana__boton-cerrar-menu{

@@ -16,7 +16,7 @@ function nuevaCard(el) {
         </div>
   </template>
   <div class="ver-mas">
-    <a href="https://github.com/sebakraus150" class="ver-mas__link">
+    <a href="https://github.com/sebakraus150" target="_blank" class="ver-mas__link">
         <div class="ver-mas__container">
             <img src="./imgs/arrow-down-svgrepo-com 1.png" class="ver-mas__icon" alt="icono ver mas" class="ver-mas-icon">
         </div>
@@ -47,12 +47,13 @@ function addCard(params = {}) {
   const clone = document.importNode(template.content, true);
   container.appendChild(clone);
 }
-function getCards(url) {
+function getCards(url, displayTitle, displayVerMas) {
   return fetch(url)
     .then((res) => {
       return res.json();
     })
     .then((data) => {
+      addComponentCard(displayTitle, displayVerMas);
       const imgs = data.includes.Asset.map((f) => {
         return f.fields.file.url;
       });

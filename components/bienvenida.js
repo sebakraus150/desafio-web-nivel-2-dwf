@@ -78,10 +78,14 @@ function getData(urlData, paramText, paramImg) {
 function addBienvenida(urlData, display, paramText, paramImg) {
   const bienvenidaEl = document.querySelector(".component-bienvenida");
   nuevaBienvenida(bienvenidaEl);
-  document.addEventListener("DOMContentLoaded", function () {
-    getData(urlData, paramText, paramImg).then((params) => {
-      configBienvenida(params);
-      document.querySelector(".presentacion").style.display = display;
-    });
+  getData(urlData, paramText, paramImg).then((params) => {
+    configBienvenida(params);
+    if (paramImg == 0) {
+      document
+        .querySelector(".bienvenida__img-content")
+        .classList.add("bienvenida__img-content-maletin");
+      document.querySelector(".bienvenida__img-shadow").style.width = "100%";
+    }
+    document.querySelector(".presentacion").style.display = display;
   });
 }

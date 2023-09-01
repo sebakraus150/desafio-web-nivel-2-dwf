@@ -5,26 +5,26 @@ function nuevoFooter(el) {
     <a href="./index.html" class="footer__logo">
         <img src="./imgs/logosk.png" class="footer__logo_content" alt="logosk">
     </a>
-    <ul class="footer__sections">
-        <li class="footer__sections_list">
+    <div class="footer__sections">
+        <a class="footer__sections_list" href="./index.html">
             <div class="footer__sections_icon">
                 <img src="./imgs/home.png" class="footer__sections_icon_content" alt="home icon">
             </div>
             <p>Home</p>
-        </li>
-        <li class="footer__sections_list">
+        </a>
+        <a class="footer__sections_list" href="./servicios.html">
             <div class="footer__sections_icon">
                 <img src="./imgs/user.png" class="footer__sections_icon_content" alt="user icon">
             </div>
             <p>Servicios</p>
-        </li>
-        <li class="footer__sections_list">
+        </a>
+        <a class="footer__sections_list" href="./contacto.html">
             <div class="footer__sections_icon">
                 <img src="./imgs/phone.png" class="footer__sections_icon_content" alt="phone icon">
             </div>
             <p>Contacto</p>
-        </li>
-    </ul>
+        </a>
+    </div>
     <div class="footer__networks">
         <a href="https://www.linkedin.com/in/sebasti%C3%A1n-kraus/" class="social_network" target="_blank">
             <img src="./imgs/linkedin.png" alt="linkedin logo" class="network_logo">
